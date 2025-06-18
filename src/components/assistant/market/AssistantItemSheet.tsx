@@ -5,6 +5,7 @@ import React from 'react'
 import { useTranslation } from 'react-i18next'
 import Markdown from 'react-native-markdown-display'
 import { Button, ScrollView, Text, XStack, YStack } from 'tamagui'
+import { useTheme } from 'tamagui'
 
 import { ISheet } from '@/components/ui/Sheet'
 import { Assistant } from '@/types/assistant'
@@ -21,6 +22,7 @@ interface AssistantItemSheetProps {
 export default function AssistantItemSheet({ assistant, bottomSheetRef, isOpen, onClose }: AssistantItemSheetProps) {
   const { t } = useTranslation()
   const snapPoints = useMemo(() => ['75%'], [])
+  const theme = useTheme()
 
   return (
     <ISheet bottomSheetRef={bottomSheetRef} snapPoints={snapPoints} isOpen={isOpen} onClose={onClose}>
@@ -38,7 +40,14 @@ export default function AssistantItemSheet({ assistant, bottomSheetRef, isOpen, 
             </XStack>
             <Text>{assistant.description}</Text>
             <Text>
-              <Markdown>{assistant.prompt}</Markdown>
+              <Markdown
+                style={{
+                  body: {
+                    color: theme.color.get()
+                  }
+                }}>
+                {assistant.prompt}
+              </Markdown>
             </Text>
           </YStack>
         </ScrollView>
