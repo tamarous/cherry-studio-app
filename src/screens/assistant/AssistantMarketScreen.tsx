@@ -11,12 +11,11 @@ import AssistantItemSheet from '@/components/assistant/market/AssistantItemSheet
 import CategoryAssistantsTab from '@/components/assistant/market/CategoryAssistantsTab'
 import { SettingContainer } from '@/components/settings'
 import { HeaderBar } from '@/components/settings/HeaderBar'
+import SafeAreaContainer from '@/components/ui/SafeAreaContainer'
 import { SearchInput } from '@/components/ui/SearchInput'
 import { getSystemAssistants } from '@/mock'
 import { Assistant } from '@/types/assistant'
 import { groupByCategories } from '@/utils/assistants'
-
-import SafeAreaContainer from '../../components/ui/SafeAreaContainer'
 interface TabConfig {
   value: string
   label: string
