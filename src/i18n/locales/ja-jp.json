@@ -120,6 +120,12 @@
         "default_model": "デフォルトモデル",
         "default_assistant_model": "デフォルトアシスタントモデル",
         "default_assistant_model_description": "新しいアシスタントを作成する際に使用するモデル。アシスタントが設定されていない場合、このモデルが使用されます。",
+        "default_assistant": {
+          "hint.name": "名前",
+          "hint.placeholder": "デフォルトアシスタント",
+          "hint.prompt": "プロンプト",
+          "hint.params": "モデルパラメータ"
+        },
         "empty": "まだモデルがありません...",
         "empty.tooltip": "お探しのページは見つかりませんでした。ご不便をおかけして申し訳ありません。",
         "empty.add_model": "最初のモデルを追加しましょう。",
@@ -128,6 +134,8 @@
         "search": "モデルを検索...",
         "title": "モデル",
         "topic_naming_model": "トピック命名",
+        "quick_assistant": "クイックアシスタント",
+        "quick_assistant_description": "クイックアシスタントが使用するモデル",
         "add.model": "モデルを追加",
         "add.model.id": "モデルID",
         "add.model.id.placeholder": "必須 例: gpt-4o",
